@@ -1,1 +1,57 @@
+
 # CIA
+
+## Layout
+
+- CiaRuntime/
+  - CiaRuntime.csproj
+  - Program.cs
+  - Models/
+    - ResourceType.cs
+    - OperationType.cs
+    - ResourceEvent.cs
+    - ServiceResourceEdge.cs
+    - ServiceResourceGraph.cs
+  - Detection/
+    - NamespaceConflictDetector.cs
+    - UnboundedResourceDetector.cs
+  - Policies/
+    - PolicyRule.cs
+    - PolicySet.cs
+    - PolicySynthesizer.cs
+  - Monitoring/
+    - RuntimeMonitor.cs
+  - Profiling/
+    - IRuntimeEventSource.cs
+    - VirtualRuntimeEventSource.cs
+
+## Requirements
+
+- .NET 6.0 SDK or later
+
+Check installation:
+
+    dotnet --version
+
+## Build
+
+From the CiaRuntime directory:
+
+    dotnet build
+
+## Run
+
+From the CiaRuntime directory:
+
+    dotnet run
+
+You should see console output that:
+
+1. Simulates service–resource events.
+2. Builds a Service Resource Graph (SRG).
+3. Detects namespace conflicts and unbounded resource usage.
+4. Synthesizes ownership and quota policies.
+5. Runs a monitor that checks new events against the policies.
+
+All thresholds and heuristics here are deliberately simple and intended only for
+demonstration and experimentation.
