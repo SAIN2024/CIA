@@ -53,5 +53,4 @@ You should see console output that:
 4. Synthesizes ownership and quota policies.
 5. Runs a monitor that checks new events against the policies.
 
-All thresholds and heuristics here are deliberately simple and intended only for
-demonstration and experimentation.
+
